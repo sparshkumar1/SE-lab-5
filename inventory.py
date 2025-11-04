@@ -93,7 +93,7 @@ def load_data(file="inventory.json"):
     Returns:
         bool: True if successful, False otherwise
     """
-    global stock_data
+    global stock_data  # pylint: disable=global-statement
     try:
         with open(file, "r", encoding="utf-8") as f:
             stock_data = json.load(f)
@@ -188,4 +188,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-# End of inventory.py
